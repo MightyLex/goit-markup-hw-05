@@ -180,11 +180,6 @@ body {
 }
 
 
-
-/* .current {
-    color: var(--accent-color);
-} */
-
 .header-contact-info {
     color: var(--main-color);
     font-weight: 500;
@@ -201,7 +196,7 @@ body {
 .header-icon {
     margin-right: 10px;
     fill: var(--main-color);
-    transition-property: all;
+    transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -616,7 +611,7 @@ body {
 
 .team-social-icon {
     fill: var(--icons-grey);
-    transition-property: all;
+    transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -663,14 +658,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition-property: all;
+    transition-property: border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-icon {
     fill: var(--icons-grey);
-    transition-property: all;
+    transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -707,7 +702,7 @@ body {
     padding: 6px 22px;
     border: transparent;
     border-radius: 4px;
-    transition-property: background-color;
+    transition-property: background-color, color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -775,7 +770,7 @@ body {
     flex-basis: calc(100% / 3 - 30px);
     margin-left: 30px;
     margin-bottom: 30px;
-    transition-property: all;
+    transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -795,11 +790,14 @@ body {
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
     border-top: transparent;
+    
 }
 
 
 .portfolio-customer-img-container {
     position: relative;
+    overflow: hidden;
+    
 }
 
 .portfolio-about-customer {
@@ -818,7 +816,8 @@ body {
     opacity: 0;
     overflow: auto;
 
-    transition-property: color;
+    transform: translateY(100%);
+    transition-property: transform, opacity;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -827,6 +826,7 @@ body {
 
 .portfolio-list-item:hover .portfolio-about-customer,
 .portfolio-list-item:focus .portfolio-about-customer {
+    transform: translateY(0%);
     opacity: 1;
 }
 
